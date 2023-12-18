@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "ODH for AI",
   "version": "1.0.0",
   "default_locale": "en",
@@ -9,7 +9,7 @@
     "48": "img/icon48.png",
     "128": "img/icon128.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "19": "img/icon19.png",
       "38": "img/icon38.png"
@@ -48,18 +48,22 @@
     "pages": ["bg/sandbox/sandbox.html"]
   },
   "web_accessible_resources": [
-    "fg/css/frame.css",
-    "fg/css/spell.css",
-    "fg/js/frame.js",
-    "fg/js/spell.js",
-    "fg/font/spell-icons.ttf",
-    "fg/font/spell-icons.woff",
-    "fg/img/play.png",
-    "fg/img/plus.png",
-    "fg/img/cloud.png",
-    "fg/img/load.gif",
-    "fg/img/fail.png",
-    "fg/img/good.png"
+    {
+      "resources": [
+        "fg/css/frame.css",
+        "fg/css/spell.css",
+        "fg/js/frame.js",
+        "fg/js/spell.js",
+        "fg/font/spell-icons.ttf",
+        "fg/font/spell-icons.woff",
+        "fg/img/play.png",
+        "fg/img/plus.png",
+        "fg/img/cloud.png",
+        "fg/img/load.gif",
+        "fg/img/fail.png",
+        "fg/img/good.png"
+      ]
+    }
   ],
   "commands": {
     "enabled": {

@@ -68,12 +68,11 @@ class ODHBack {
         // NOP
     }
 
-    tabInvokeAll(action, params) {
-        chrome.tabs.query({}, (tabs) => {
-            for (let tab of tabs) {
-                this.tabInvoke(tab.id, action, params);
-            }
-        });
+    async tabInvokeAll(action, params) {
+        const tabs = await chrome.tabs.query({});
+        for (let tab of tabs) {
+            this.tabInvoke(tab.id, action, params);
+        }
     }
 
     tabInvoke(tabId, action, params) {
@@ -101,7 +100,7 @@ class ODHBack {
         }
 
         let tags = options.tags.trim();
-        if (tags.length > 0) 
+        if (tags.length > 0)
             note.tags = tags.split(' ');
 
         if (options.audio && notedef.audios.length > 0) {
@@ -221,7 +220,7 @@ class ODHBack {
 
     async api_playAudio(params) {
         let { url, callback } = params;
-        
+
         for (let key in this.audios) {
             this.audios[key].pause();
         }

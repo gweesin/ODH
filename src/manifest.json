@@ -18,7 +18,8 @@
   },
   "author": "Zhenyu Huang",
   "background": {
-    "service_worker": "bg/js/backend.js"
+    "service_worker": "bg/js/backend.js",
+    "type": "module"
   },
   "content_scripts": [
     {

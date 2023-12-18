@@ -43,11 +43,11 @@ class ODHBack {
 
     onInstalled(details) {
         if (details.reason === 'install') {
-            chrome.tabs.create({ url: chrome.extension.getURL('bg/guide.html') });
+            chrome.tabs.create({ url: chrome.runtime.getURL('bg/guide.html') });
             return;
         }
         if (details.reason === 'update') {
-            chrome.tabs.create({ url: chrome.extension.getURL('bg/update.html') });
+            chrome.tabs.create({ url: chrome.runtime.getURL('bg/update.html') });
             return;
         }
     }

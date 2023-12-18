@@ -18,11 +18,14 @@
   },
   "author": "Zhenyu Huang",
   "background": {
-    "page": "bg/background.html"
+    "service_worker": "bg/js/backend.js"
   },
   "content_scripts": [
     {
-      "matches": ["*://*/*", "file://*/*"],
+      "matches": [
+        "*://*/*",
+        "file://*/*"
+      ],
       "js": [
         "fg/js/api.js",
         "fg/js/popup.js",
@@ -30,7 +33,9 @@
         "fg/js/text.js",
         "fg/js/frontend.js"
       ],
-      "css": ["fg/css/client.css"]
+      "css": [
+        "fg/css/client.css"
+      ]
     }
   ],
   "minimum_chrome_version": "50.0.0.0",
@@ -45,7 +50,9 @@
     "storage"
   ],
   "sandbox": {
-    "pages": ["bg/sandbox/sandbox.html"]
+    "pages": [
+      "bg/sandbox/sandbox.html"
+    ]
   },
   "web_accessible_resources": [
     {
@@ -62,6 +69,10 @@
         "fg/img/load.gif",
         "fg/img/fail.png",
         "fg/img/good.png"
+      ],
+      "matches": [
+        "*://*/*",
+        "file://*/*"
       ]
     }
   ],

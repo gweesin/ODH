@@ -1,3 +1,10 @@
+import '../../lib/jquery-3.0.0.min.js';
+import './ankiconnect.js';
+import './ankiweb.js';
+import './deinflector.js';
+import './utils.js';
+import './agent.js';
+
 /* global Ankiconnect, Ankiweb, Deinflector, Builtin, Agent, optionsLoad, optionsSave */
 class ODHBack {
     constructor() {

@@ -44,10 +44,11 @@
   },
   "permissions": [
     "webRequest",
-    "webRequestBlocking",
-    "https://ankiweb.net/*",
-    "https://ankiuser.net/*",
     "storage"
+  ],
+  "host_permissions": [
+    "https://ankiweb.net/*",
+    "https://ankiuser.net/*"
   ],
   "sandbox": {
     "pages": [
